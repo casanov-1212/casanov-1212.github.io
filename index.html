@@ -4,36 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kofi Victoire Mardochée Ahama — Analyste de données</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; line-height: 1.6; color: #222; }
-header { text-align: center; border-bottom: 2px solid #222; padding-bottom: 10px; }
-h2 { border-left: 5px solid #c8a200; padding-left: 10px; }
-.projet { background: #f5f5f5; padding: 15px; border-radius: 8px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Poppins', sans-serif; background: #0f0f14; color: #eee; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; position: sticky; top: 0; background: rgba(15,15,20,0.95); z-index: 10; }
+nav .logo { font-weight: 700; color: #d4a017; font-size: 1.3rem; }
+nav a { color: #eee; text-decoration: none; margin-left: 25px; }
+nav a:hover { color: #d4a017; }
+.hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; background: linear-gradient(135deg, #0f0f14 50%, #2a1f05); }
+.hero h1 { font-size: 3rem; line-height: 1.2; }
+.hero h1 span { color: #d4a017; }
+.hero p { font-size: 1.2rem; color: #bbb; max-width: 600px; margin: 20px 0 30px; }
+.btn { display: inline-block; background: #d4a017; color: #0f0f14; padding: 12px 28px; border-radius: 30px; font-weight: 500; text-decoration: none; width: fit-content; }
+.btn:hover { background: #f0c040; }
+section { padding: 80px 8%; }
+section h2 { font-size: 2rem; margin-bottom: 30px; }
+section h2 span { color: #d4a017; }
+.apropos p { max-width: 750px; color: #ccc; font-size: 1.05rem; }
+.grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.carte { background: #1a1a22; border-radius: 16px; overflow: hidden; text-decoration: none; color: #eee; transition: transform 0.3s, box-shadow 0.3s; }
+.carte:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(212,160,23,0.25); }
+.carte .image { height: 180px; background: linear-gradient(135deg, #d4a017, #7a4e00); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+.carte .contenu { padding: 20px; }
+.carte .tag { font-size: 0.8rem; color: #d4a017; text-transform: uppercase; letter-spacing: 1px; }
+.carte h3 { margin: 8px 0; }
+.carte p { color: #aaa; font-size: 0.95rem; }
+.carte.bientot { opacity: 0.5; pointer-events: none; }
+.carte.bientot .image { background: #2a2a33; }
+footer { text-align: center; padding: 40px; color: #777; border-top: 1px solid #222; }
+footer a { color: #d4a017; text-decoration: none; }
+@media (max-width: 600px) { .hero h1 { font-size: 2rem; } nav a { margin-left: 12px; } }
 </style>
 </head>
 <body>
-<header>
-<h1>Kofi Victoire Mardochée Ahama</h1>
-<p>Entrepreneur et analyste de données — Longueuil, Québec</p>
-</header>
 
-<h2>À propos</h2>
-<p>J'analyse des données publiques pour mieux comprendre les réalités de la diaspora africaine au Québec, et je les rends accessibles au grand public.</p>
+<nav>
+<div class="logo">KVM Ahama</div>
+<div><a href="#apropos">À propos</a><a href="#etudes">Études</a><a href="#contact">Contact</a></div>
+</nav>
 
-<h2>Projet</h2>
-<div class="projet">
-<h3>La diaspora africaine au Québec : là où on réussit, là où on bloque</h3>
-<p><strong>Données :</strong> Recensement 2021 de Statistique Canada, Québec, 25 à 64 ans.</p>
-<p><strong>Outils :</strong> Excel, Power BI, LinkedIn.</p>
-<p><strong>Constats :</strong></p>
-<ul>
-<li>Les immigrants noirs sont moins diplômés que les PMV immigrants (34 % contre 50 %), mais les personnes noires nées ici le sont davantage (27 % contre 25 %).</li>
-<li>Chez les personnes nées ici, le chômage des personnes noires est presque le double de celui des PMV (9,3 % contre 5,3 %).</li>
-<li>L'écart de faible revenu se resserre d'une génération à l'autre, mais persiste.</li>
-</ul>
+<div class="hero">
+<h1>Les données racontent<br><span>notre histoire.</span></h1>
+<p>Je suis Kofi Victoire Mardochée Ahama, entrepreneur et analyste de données. J'utilise les données publiques pour révéler les réalités de la diaspora africaine au Québec.</p>
+<a class="btn" href="#etudes">Voir mes études</a>
 </div>
 
-<h2>Contact</h2>
-<p>Retrouvez-moi sur LinkedIn.</p>
+<section class="apropos" id="apropos">
+<h2>À <span>propos</span></h2>
+<p>Fondateur de Koffey Group, basé à Longueuil, je transforme des tableaux de chiffres en constats clairs et accessibles. Mes outils : Excel, Power BI, et la narration de données pour toucher le grand public.</p>
+</section>
+
+<section id="etudes">
+<h2>Mes <span>études</span></h2>
+<div class="grille">
+
+<a class="carte" href="diaspora.html">
+<div class="image">📊</div>
+<div class="contenu">
+<div class="tag">Recensement 2021 · Power BI</div>
+<h3>La diaspora africaine au Québec</h3>
+<p>Là où on réussit, là où on bloque : six indicateurs socio-économiques.</p>
+</div>
+</a>
+
+<div class="carte bientot">
+<div class="image">⏳</div>
+<div class="contenu">
+<div class="tag">Bientôt</div>
+<h3>Prochaine étude</h3>
+<p>En préparation.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer id="contact">
+<p>Retrouvez-moi sur LinkedIn · © 2026 Kofi Victoire Mardochée Ahama</p>
+</footer>
+
 </body>
 </html>
