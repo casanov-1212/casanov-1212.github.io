@@ -4,84 +4,140 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Koffi Victoire Mardochée Ahama — Analyste de données</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; background: #fff; color: #1c1c1c; line-height: 1.7; }
-.conteneur { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-nav { border-bottom: 1px solid #e5e5e5; }
+body { font-family: 'Inter', sans-serif; background: #f6f7f9; color: #1c1c1c; line-height: 1.7; }
+.conteneur { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+nav { background: #13263f; }
 nav .conteneur { display: flex; justify-content: space-between; align-items: center; height: 64px; }
-nav .logo { font-weight: 600; color: #1c1c1c; text-decoration: none; }
-nav a { color: #555; text-decoration: none; margin-left: 28px; font-size: 0.95rem; }
-nav a:hover { color: #1f3a5f; }
-.accueil { padding: 100px 0 80px; border-bottom: 1px solid #e5e5e5; }
-.accueil h1 { font-size: 2.4rem; font-weight: 600; line-height: 1.25; max-width: 700px; }
-.accueil p { color: #555; font-size: 1.1rem; max-width: 620px; margin: 20px 0 32px; }
-.btn { display: inline-block; border: 1px solid #1f3a5f; color: #1f3a5f; padding: 10px 24px; text-decoration: none; font-weight: 500; }
-.btn:hover { background: #1f3a5f; color: #fff; }
-section { padding: 72px 0; border-bottom: 1px solid #e5e5e5; }
-section h2 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #1f3a5f; margin-bottom: 28px; }
-.apropos p { max-width: 700px; color: #333; }
-.etude { display: block; padding: 28px 0; border-top: 1px solid #e5e5e5; text-decoration: none; color: #1c1c1c; }
-.etude:last-child { border-bottom: 1px solid #e5e5e5; }
-.etude .meta { font-size: 0.85rem; color: #777; }
-.etude h3 { font-size: 1.3rem; font-weight: 600; margin: 6px 0; }
-.etude p { color: #555; }
-.etude .lire { color: #1f3a5f; font-weight: 500; font-size: 0.95rem; margin-top: 10px; display: inline-block; }
-.etude:hover h3 { color: #1f3a5f; }
-.etude.bientot { color: #aaa; pointer-events: none; }
-.etude.bientot h3, .etude.bientot p { color: #aaa; }
-footer { padding: 40px 0; color: #888; font-size: 0.9rem; }
-@media (max-width: 600px) { .accueil h1 { font-size: 1.8rem; } nav a { margin-left: 14px; } }
+nav .logo { font-weight: 700; color: #fff; text-decoration: none; letter-spacing: 0.5px; }
+nav a { color: #c9d3e0; text-decoration: none; margin-left: 28px; font-size: 0.95rem; }
+nav a:hover { color: #fff; }
+.accueil { background: #13263f; color: #fff; padding: 70px 0 90px; }
+.accueil .conteneur { display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: center; }
+.accueil .sur { color: #e0a526; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; }
+.accueil h1 { font-size: 2.8rem; font-weight: 700; line-height: 1.2; margin: 14px 0 20px; }
+.accueil p { color: #c9d3e0; font-size: 1.1rem; margin-bottom: 32px; }
+.boutons a { display: inline-block; padding: 12px 26px; border-radius: 4px; text-decoration: none; font-weight: 600; margin-right: 12px; }
+.btn-plein { background: #e0a526; color: #13263f; }
+.btn-vide { border: 1px solid #c9d3e0; color: #fff; }
+.photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 6px; background: #22395a; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+.chiffres-cles { background: #fff; margin-top: -40px; position: relative; border-radius: 6px; box-shadow: 0 8px 24px rgba(19,38,63,0.08); display: grid; grid-template-columns: repeat(3, 1fr); }
+.chiffres-cles div { padding: 28px; border-right: 1px solid #eceef2; }
+.chiffres-cles div:last-child { border-right: none; }
+.chiffres-cles strong { display: block; font-size: 1.8rem; color: #13263f; }
+.chiffres-cles span { color: #666; font-size: 0.9rem; }
+section { padding: 80px 0 40px; }
+.titre-section { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #b8860b; }
+section h2 { font-size: 1.9rem; font-weight: 700; color: #13263f; margin: 6px 0 28px; }
+.apropos { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; }
+.apropos p { color: #333; margin-bottom: 14px; }
+.competences { background: #fff; border-radius: 6px; padding: 24px; border: 1px solid #eceef2; }
+.competences h4 { color: #13263f; margin-bottom: 12px; }
+.competences li { list-style: none; padding: 8px 0; border-bottom: 1px solid #f0f1f4; color: #444; }
+.grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
+.carte { background: #fff; border-radius: 6px; border: 1px solid #eceef2; overflow: hidden; text-decoration: none; color: #1c1c1c; transition: box-shadow 0.2s, transform 0.2s; }
+.carte:hover { box-shadow: 0 12px 28px rgba(19,38,63,0.12); transform: translateY(-3px); }
+.carte .bandeau { height: 8px; background: #13263f; }
+.carte .contenu { padding: 26px; }
+.carte .meta { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+.carte h3 { font-size: 1.25rem; color: #13263f; margin: 8px 0 10px; }
+.carte p { color: #555; font-size: 0.95rem; }
+.carte .lire { display: inline-block; margin-top: 16px; color: #b8860b; font-weight: 600; }
+.carte.bientot { opacity: 0.55; pointer-events: none; }
+footer { background: #13263f; color: #c9d3e0; padding: 40px 0; margin-top: 80px; font-size: 0.9rem; }
+footer .conteneur { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+@media (max-width: 800px) { .accueil .conteneur, .apropos { grid-template-columns: 1fr; } .accueil h1 { font-size: 2rem; } .chiffres-cles { grid-template-columns: 1fr; } nav a { margin-left: 14px; } }
 </style>
 </head>
 <body>
 
 <nav>
 <div class="conteneur">
-<a class="logo" href="index.html">Koffi V. M. Ahama</a>
+<a class="logo" href="index.html">KOFFI V. M. AHAMA</a>
 <div><a href="#apropos">À propos</a><a href="#etudes">Études</a><a href="#contact">Contact</a></div>
 </div>
 </nav>
 
 <div class="accueil">
 <div class="conteneur">
+<div>
+<div class="sur">Analyste de données · Entrepreneur</div>
 <h1>Les données racontent notre histoire.</h1>
-<p>Je suis Koffi Victoire Mardochée Ahama, entrepreneur et analyste de données. J'utilise les données publiques pour révéler les réalités de la diaspora africaine au Québec.</p>
-<a class="btn" href="#etudes">Voir mes études</a>
+<p>Je suis Koffi Victoire Mardochée Ahama. J'utilise les données publiques pour révéler les réalités de la diaspora africaine au Québec, et les rendre accessibles à tous.</p>
+<div class="boutons">
+<a class="btn-plein" href="#etudes">Voir mes études</a>
+<a class="btn-vide" href="#contact">Me contacter</a>
+</div>
+</div>
+<img class="photo" src="photo.jpg" alt="Koffi Victoire Mardochée Ahama">
 </div>
 </div>
 
-<section class="apropos" id="apropos">
 <div class="conteneur">
-<h2>À propos</h2>
-<p>Fondateur de Koffey Group, basé à Longueuil, je transforme des tableaux de chiffres en constats clairs et accessibles. Outils : Excel, Power BI, et la narration de données pour rejoindre le grand public.</p>
+<div class="chiffres-cles">
+<div><strong>1</strong><span>étude publiée</span></div>
+<div><strong>6</strong><span>indicateurs analysés</span></div>
+<div><strong>2021</strong><span>recensement, Statistique Canada</span></div>
+</div>
+</div>
+
+<section id="apropos">
+<div class="conteneur">
+<div class="titre-section">À propos</div>
+<h2>Des chiffres aux constats</h2>
+<div class="apropos">
+<div>
+<p>Fondateur de Koffey Group, basé à Longueuil, je transforme des tableaux de données en constats clairs. Mon objectif : mesurer là où notre communauté réussit et là où elle bloque, pour nourrir des solutions collectives.</p>
+<p>Chaque étude part de sources officielles, passe par un tableau de bord, et se termine par une série de publications pour le grand public.</p>
+</div>
+<div class="competences">
+<h4>Outils et compétences</h4>
+<ul>
+<li>Excel : nettoyage et organisation des données</li>
+<li>Power BI : tableaux de bord</li>
+<li>Narration de données</li>
+<li>HTML, CSS, JavaScript</li>
+</ul>
+</div>
+</div>
 </div>
 </section>
 
 <section id="etudes">
 <div class="conteneur">
-<h2>Études</h2>
+<div class="titre-section">Portfolio</div>
+<h2>Mes études</h2>
+<div class="grille">
 
-<a class="etude" href="diaspora.html">
-<div class="meta">Novembre 2026 · Recensement 2021 · Power BI</div>
-<h3>La diaspora africaine au Québec : là où on réussit, là où on bloque</h3>
-<p>Portrait socio-économique en six indicateurs : scolarité, emploi, surqualification, revenu, logement et faible revenu.</p>
+<a class="carte" href="diaspora.html">
+<div class="bandeau"></div>
+<div class="contenu">
+<div class="meta">Novembre 2026 · Power BI</div>
+<h3>La diaspora africaine au Québec</h3>
+<p>Là où on réussit, là où on bloque : un portrait socio-économique en six indicateurs.</p>
 <span class="lire">Lire l'étude →</span>
+</div>
 </a>
 
-<div class="etude bientot">
+<div class="carte bientot">
+<div class="bandeau"></div>
+<div class="contenu">
 <div class="meta">À venir</div>
 <h3>Prochaine étude</h3>
 <p>En préparation.</p>
 </div>
+</div>
 
+</div>
 </div>
 </section>
 
 <footer id="contact">
 <div class="conteneur">
-<p>Retrouvez-moi sur LinkedIn · © 2026 Koffi Victoire Mardochée Ahama</p>
+<span>© 2026 Koffi Victoire Mardochée Ahama · Longueuil, Québec</span>
+<span>Retrouvez-moi sur LinkedIn</span>
 </div>
 </footer>
 
